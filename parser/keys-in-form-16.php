@@ -17,6 +17,12 @@ class Keys{
 	public static $keys_in_form_16_level_1 = array(
 	'name address employee',
 	);
+	
+	public static $single_line_keys = array(
+		'Gross total income' => array('required' => array('gross', 'income', '6', '7')),
+		'Deductible amount under Chapter VI-A ' => array('required' => array('aggregate','chapter', 'vi','a')),
+		'Tax payable' => array('required' => array('tax', 'payable'), 'optional' => array('14','15','16','17')),
+	);
 
 	public static $composite_keys_in_form_16 = array(
 	'Period' => array('To', 'From'),
