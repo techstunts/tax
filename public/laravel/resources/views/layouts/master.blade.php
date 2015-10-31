@@ -47,33 +47,8 @@
                 </div>
             </div>
         </div>
-        <nav>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <ul>
-                            <li><a href="/">Home</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li>
-                                <a href="#">e-Filing</a>
-                                <ul>
-                                    <li><a href="#">Submenu 1</a></li>
-                                    <li><a href="#">Submenu 2</a></li>
-                                    <li><a href="#">Submenu 3</a></li>
-                                    <li><a href="#">Submenu 4</a></li>
-                                    <li><a href="#">Submenu 5</a></li>
-                                    <li><a href="#">Submenu 6</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">e-TDS</a></li>
-                            <li><a href="#">Form 26AS</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
+
+        @include('layouts.menu')
     </header>
 
     <div id="contentCntr">
