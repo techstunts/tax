@@ -31,7 +31,7 @@
                 <div class="row">
                     <div class="col-md-3 col-sm-3">
                         <div class="logo wow slideInLeft animated" data-wow-duration="1s">
-                            <a href="#"><img src="{!! asset('images/logo.png') !!}" alt="Retrun Karo"></a>
+                            <a href="/"><img src="{!! asset('images/logo.png') !!}" alt="Retrun Karo"></a>
                         </div>
                     </div>
                     <div class="col-md-6 search col-sm-6 wow bounceInUp animated">
@@ -41,8 +41,8 @@
                         </form>
                     </div>
                     <div class="col-md-3 col-sm-3 login-signup wow slideInRight animated" data-wow-duration="1s">
-                        <a href="#">Sign Up</a>
-                        <a href="#">Login</a>
+                        <a href="{!! url('signup') !!}">Sign Up</a>
+                        <a href="{!! url('login') !!}">Login</a>
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <ul>
-                            <li><a href="#">Home</a></li>
+                            <li><a href="/">Home</a></li>
                             <li><a href="#">About Us</a></li>
                             <li>
                                 <a href="#">e-Filing</a>
@@ -137,7 +137,7 @@
                     </div>
                 </div>
                 <div class="col-md-2 col-sm-2 col-xs-12 connect">
-                    <h4>Connet With Us</h4>
+                    <h4>Connect With Us</h4>
                     <a href="#" class="fb"><i class="fa fa-facebook"></i></a>
                     <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
                     <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
