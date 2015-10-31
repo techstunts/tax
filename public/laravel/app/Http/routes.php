@@ -12,5 +12,21 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
+});
+
+Route::get('login', function () {
+    return view('user.login');
+});
+
+Route::get('/signup', function () {
+    return view('user.signup');
+});
+
+Route::get('/forgot-password', function () {
+    return view('user.forgot-password');
+});
+
+Route::get('/change-password', function () {
+    return view('user.change-password');
 });
