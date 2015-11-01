@@ -19,3 +19,4 @@ Route::get('/user/{page}', function ($page) {
     return view('user.' . $page);
 });
 
+Route::get('{slug}','PostsController@view')->where('slug','([A-z0-9-_\/\.]+)');
