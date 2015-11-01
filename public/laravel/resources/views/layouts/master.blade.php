@@ -41,8 +41,8 @@
                         </form>
                     </div>
                     <div class="col-md-3 col-sm-3 login-signup wow slideInRight animated" data-wow-duration="1s">
-                        <a href="{!! url('signup') !!}">Sign Up</a>
-                        <a href="{!! url('login') !!}">Login</a>
+                        <a href="{!! url('user/signup') !!}">Sign Up</a>
+                        <a href="{!! url('user/login') !!}">Login</a>
                     </div>
                 </div>
             </div>

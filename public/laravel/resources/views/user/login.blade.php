@@ -20,9 +20,9 @@
                         <input type="password" class="form-control" placeholder="Password">
                     </div>
                     <input type="button" class="btn btn-primary btn-lg" value="Login">
-                    <a href="{!! url('forgot-password') !!}" class="forgotPsw">Forgot your password?</a>
+                    <a href="{!! url('user/forgot-password') !!}" class="forgotPsw">Forgot your password?</a>
                     <div class="bot">
-                        Don’t have an account yet? Click <a href="{!! url('signup') !!}" class="txtred">here</a> for new account.
+                        Don’t have an account yet? Click <a href="{!! url('user/signup') !!}" class="txtred">here</a> for new account.
                     </div>
                 </div>
                 <div class="col-md-5 col-md-offset-1 col-sm-6 right">

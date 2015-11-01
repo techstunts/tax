@@ -87,7 +87,7 @@
                     <div class="clear"></div>
                     <input type="button" class="btn btn-primary btn-lg" value="Create Account">
                     <div class="bot">
-                        Already have an account? Click <a href="#" class="txtred">here</a> to login.
+                        Already have an account? Click <a href="{!! url('user/login') !!}" class="txtred">here</a> to login.
                     </div>
                 </div>
             </div>
