@@ -9,6 +9,7 @@
     <title>@yield('title')</title>
 
     <link href="{!! asset('css/global.css') !!}" rel="stylesheet">
+    <link href="{!! asset('css/custom.css') !!}" rel="stylesheet">
     <link href="{!! asset('css/bootstrap.css') !!}" rel="stylesheet" media="screen">
     <link href="{!! asset('css/font-awesome.css') !!}" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="{!! asset('css/meanmenu.css') !!}" media="all" />
