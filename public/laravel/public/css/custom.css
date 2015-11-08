@@ -5,3 +5,9 @@ div.post-actions .right { margin-top: 24%; right: 16%!important; left: auto!impo
 div.post-actions .right p { padding-right: 0; padding-left: 5px; text-align: left; }
 div.post-actions .right a { color: #d0312e; background-color: #fff; }
 div.post-actions .right a em { width: 25px; height: 25px; background-position: -50px top; }
+
+div.wizard .btn-right{float:right;}
+div.wizard div.steps {margin-top: 4px;margin-bottom: 4px;}
+div.wizard div.steps a {margin: 0px 5px; padding: 4px 10px; color: #d0312e; border: 1px solid #d0312e; text-align: center; float: left; display: block;}
+div.wizard div.steps a.selected{color: #fff; background-color: #d0312e;}
+

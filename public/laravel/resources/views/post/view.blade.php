@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Login')
+@section('title', $post->post_title)
 
 @section('content')
     <div class="section">
@@ -16,7 +16,7 @@
                 </div>
                 <div class="col-md-5 col-md-offset-1 col-sm-6 right">
                     <div class="post-actions">
-                        <a href="{!! url('filing/start') !!}"><em class="sprite"></em>Start Filing Now</a>
+                        <a href="{!! url('efiling/individual/personal') !!}"><em class="sprite"></em>Start Filing Now</a>
                     </div>
                 </div>
             </div>
