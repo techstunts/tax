@@ -3,6 +3,7 @@
 @section('title', $post->post_title)
 
 @section('content')
+<div id="contentCntr">
     <div class="section">
         <div class="container">
             <div class="row">
@@ -23,6 +24,6 @@
 
         </div>
     </div>
-
+</div>
 
 @endsection

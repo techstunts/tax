@@ -3,6 +3,7 @@
 @section('title', 'Signup')
 
 @section('content')
+<div id="contentCntr">
     <div class="loginBox section">
         <div class="container">
             <div class="row">
@@ -90,5 +91,5 @@
             </div>
         </div>
     </div>
-
+</div>
 @endsection

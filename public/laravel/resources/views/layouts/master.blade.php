@@ -57,9 +57,7 @@
         @include('layouts.menu')
     </header>
 
-    <div id="contentCntr">
-        @yield('content')
-    </div>
+    @yield('content')
 
     <footer>
         <div class="container">

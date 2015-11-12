@@ -3,12 +3,13 @@
 @section('title', 'Efiling : ' . $step_name)
 
 @section('content')
+<div id="contentCntr">
     <div class="loginBox section wizard">
         <div class="container">
             <div class="row">
                 <div class="clearfix">
                     <div class="col-md-12 alignC">
-                        <h3>E-file tax return : {!! strtoupper(substr($tax_payer_type,0,1)) . substr($tax_payer_type,1) !!}</h3>
+                        <h1>E-file tax return : {!! strtoupper(substr($tax_payer_type,0,1)) . substr($tax_payer_type,1) !!}</h1>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-md-offset-3 steps">
@@ -44,5 +45,5 @@
             </div>
         </div>
     </div>
-
+</div>
 @endsection

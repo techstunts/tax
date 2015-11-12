@@ -11,10 +11,10 @@
             </h3>
             <div class="left" data-pos="['0%', '0%', '0%', '0%']" data-duration="700" data-effect="fadein">
                 <p>Have your Form-16?<span>Upload Now.</span></p>
-                <a href="#"><em class="sprite"></em>Upload Form 16</a>
+                <a href="{!! url('efiling/individual/personal') !!}"><em class="sprite"></em>Upload Form 16</a>
             </div>
             <div class="right" data-pos="['0%', '0%', '0%', '0%']" data-duration="700" data-effect="fadein">
-                <a href="#"><em class="sprite"></em>Start Filling Now</a>
+                <a href="{!! url('efiling/individual/personal') !!}"><em class="sprite"></em>Start Filling Now</a>
                 <p>Don&rsquo;t have Form&minus;16?<span>Begin anyway.</span></p>
             </div>
         </div>
@@ -28,10 +28,10 @@
             </h3>
             <div class="left" data-pos="['0%', '0%', '0%', '0%']" data-duration="700" data-effect="fadein">
                 <p>Have your Form-16?<span>Upload Now.</span></p>
-                <a href="#"><em class="sprite"></em>Upload Form 16</a>
+                <a href="{!! url('efiling/individual/personal') !!}"><em class="sprite"></em>Upload Form 16</a>
             </div>
             <div class="right" data-pos="['0%', '0%', '0%', '0%']" data-duration="700" data-effect="fadein">
-                <a href="#"><em class="sprite"></em>Start Filling Now</a>
+                <a href="{!! url('efiling/individual/personal') !!}"><em class="sprite"></em>Start Filling Now</a>
                 <p>Don&rsquo;t have Form&minus;16?<span>Begin anyway.</span></p>
             </div>
         </div>
@@ -45,10 +45,10 @@
             </h3>
             <div class="left" data-pos="['0%', '0%', '0%', '0%']" data-duration="700" data-effect="fadein">
                 <p>Have your Form-16?<span>Upload Now.</span></p>
-                <a href="#"><em class="sprite"></em>Upload Form 16</a>
+                <a href="{!! url('efiling/individual/personal') !!}"><em class="sprite"></em>Upload Form 16</a>
             </div>
             <div class="right" data-pos="['0%', '0%', '0%', '0%']" data-duration="700" data-effect="fadein">
-                <a href="#"><em class="sprite"></em>Start Filling Now</a>
+                <a href="{!! url('efiling/individual/personal') !!}"><em class="sprite"></em>Start Filling Now</a>
                 <p>Don&rsquo;t have Form&minus;16?<span>Begin anyway.</span></p>
             </div>
         </div>
