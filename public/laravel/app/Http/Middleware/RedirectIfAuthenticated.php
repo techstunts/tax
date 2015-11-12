@@ -34,8 +34,12 @@ class RedirectIfAuthenticated
      */
     public function handle($request, Closure $next)
     {
-        if ($this->auth->check()) {
-            return redirect('/home');
+        //If user is logged in and accessing auth controller and accessing actions other than logout like login, register, forgotpassword
+        //Then redirect to home page
+        if ($this->auth->check()
+            && strpos($request->route()->getActionName(), 'AuthController')>=0
+            && $request->route()->action != 'logout') {
+            return redirect('/');
         }
 
         return $next($request);

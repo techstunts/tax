@@ -42,8 +42,13 @@
                         </form>
                     </div>
                     <div class="col-md-3 col-sm-3 login-signup wow slideInRight animated" data-wow-duration="1s">
-                        <a href="{!! url('user/signup') !!}">Sign Up</a>
-                        <a href="{!! url('user/login') !!}">Login</a>
+                        @if(!Auth::check())
+                            <a href="{!! url('auth/register') !!}">Sign Up</a>
+                            <a href="{!! url('auth/login') !!}">Login</a>
+                        @else
+                            <a href="{!! url('auth/logout') !!}">Logout</a>
+                            <a href="{!! url('efiling/individual/personal') !!}">My Efile</a>
+                        @endif
                     </div>
                 </div>
             </div>

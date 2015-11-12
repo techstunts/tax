@@ -7,6 +7,7 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
@@ -23,6 +24,9 @@ class AuthController extends Controller
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
+    protected $redirectPath = '/efiling/individual/personal';
+    protected $redirectAfterLogout = '/';
+
     /**
      * Create a new authentication controller instance.
      *
@@ -31,6 +35,12 @@ class AuthController extends Controller
     public function __construct()
     {
         $this->middleware('guest', ['except' => 'getLogout']);
+    }
+
+    public function index(Request $request, $action)
+    {
+        $method = strtolower($_SERVER['REQUEST_METHOD']) . strtoupper(substr($action,0,1)) . substr($action,1);
+        return $this->$method($_SERVER['REQUEST_METHOD'] == 'POST' ? $request : null);
     }
 
     /**
@@ -49,7 +59,7 @@ class AuthController extends Controller
     }
 
     /**
-     * Create a new user instance after a valid registration.
+     * Create a new auth instance after a valid registration.
      *
      * @param  array  $data
      * @return User

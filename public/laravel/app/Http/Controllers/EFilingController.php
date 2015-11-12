@@ -90,11 +90,15 @@ class EFilingController extends Controller
 
     public function update(Request $request, $tax_payer_type, $step){
 
+        if($request->user() == null){
+            return redirect('auth/login');
+        }
+
         $this->init_steps($tax_payer_type, $step);
 
         $groups_template = $this->groups_template;
 
-        $efile = EFile::where('user_id',1)->first();
+        $efile = EFile::where('user_id',$request->user()->id)->first();
         if(!$efile){
             $efile = new EFile();
             $efile->created_at = time();
@@ -105,7 +109,7 @@ class EFilingController extends Controller
 
         $efile_values = array_replace_recursive($groups_template, $request->request->all());
 
-        $efile->user_id = 1;
+        $efile->user_id = $request->user()->id;
         $efile->data_json = json_encode($efile_values);
         $efile->tax_payer_type = 1;
         $efile->last_step = 1;;
@@ -123,14 +127,22 @@ class EFilingController extends Controller
      *
      * @return IlluminateHttpResponse
      */
-    public function step($tax_payer_type, $step)
+    public function step(Request $request, $tax_payer_type, $step)
     {
+        if($request->user() == null){
+            return redirect('auth/login');
+        }
+
         $this->init_steps($tax_payer_type, $step);
 
-        $efile_details = EFile::where('user_id',1)->first();
-        $filled_data = [];
+        $efile_details = EFile::where('user_id',$request->user()->id)->first();
+        $efile_data = [];
         if($efile_details){
-            $filled_data = json_decode($efile_details->data_json, true);
+            $efile_data = json_decode($efile_details->data_json, true);
+        }
+
+        if(!isset($efile_data['personal']['name']) || strlen(trim($efile_data['personal']['name'])) == 0){
+            $efile_data['personal']['name'] = $request->user()->name;
         }
 
         $groups = [];
@@ -141,9 +153,17 @@ class EFilingController extends Controller
                     $groups[$v] = $this->efiling_groups[$v];
                 }
             }
-            return view('efiling.edit', ['step' => $step, 'step_name' => $this->steps[$tax_payer_type][$step]['name'], 'tax_payer_type' => $tax_payer_type,
-                'groups' => $groups, 'steps' => $this->steps[$tax_payer_type], 'steps_ordered' => $this->steps_ordered,
-                'previous_step' => $this->previous_step, 'next_step' => $this->next_step, 'filled_data' => $filled_data]);
+            return view('efiling.edit', [
+                'step' => $step,
+                'step_name' => $this->steps[$tax_payer_type][$step]['name'],
+                'tax_payer_type' => $tax_payer_type,
+                'groups' => $groups,
+                'steps' => $this->steps[$tax_payer_type],
+                'steps_ordered' => $this->steps_ordered,
+                'previous_step' => $this->previous_step,
+                'next_step' => $this->next_step,
+                'efile_data' => $efile_data
+            ]);
         }
     }
 

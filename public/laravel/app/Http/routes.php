@@ -15,9 +15,7 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/user/{page}', function ($page) {
-    return view('user.' . $page);
-});
+Route::any('auth/{action}', 'Auth\AuthController@index');
 
 Route::get('/efiling/{tax_payer_type}/{step}', 'EFilingController@step');
 Route::post('/efiling/{tax_payer_type}/{step}', 'EFilingController@update');

@@ -25,8 +25,8 @@
                                        class="form-control"
                                        name="{!! $group_name . '[' . $field_name . ']' !!}"
                                        placeholder="{!! $field_details['display_name'] !!}"
-                                       value="{!! isset($filled_data[$group_name][$field_name]) && !is_array($filled_data[$group_name][$field_name])
-                                       ? $filled_data[$group_name][$field_name] : ""  !!}">
+                                       value="{!! isset($efile_data[$group_name][$field_name]) && !is_array($efile_data[$group_name][$field_name])
+                                       ? $efile_data[$group_name][$field_name] : ""  !!}">
                             </div>
                         @endforeach
                     </div>
