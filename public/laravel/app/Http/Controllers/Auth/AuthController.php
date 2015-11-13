@@ -92,11 +92,14 @@ class AuthController extends Controller
             ? 'unavailable' . '_' . $social_user->getId()
             : $social_user->getEmail();
 
-        $user = User::create([
-            'name' => $social_user->getName(),
-            'email' => $oauth_email,
-            'password' => rand(10000000,10000000000),
-        ]);
+        $user = User::where('email', $oauth_email)->first();
+        if(!$user){
+            $user = User::create([
+                'name' => $social_user->getName(),
+                'email' => $oauth_email,
+                'password' => rand(10000000,10000000000),
+            ]);
+        }
 
         $user_oauth_provider = UserOuthProvider::create([
             'user_id' => $user->id,
