@@ -11,3 +11,6 @@ div.wizard div.steps {margin-top: 4px;margin-bottom: 4px;}
 div.wizard div.steps a {margin: 0px 5px; padding: 4px 10px; color: #d0312e; border: 1px solid #d0312e; text-align: center; float: left; display: block;}
 div.wizard div.steps a.selected{color: #fff; background-color: #d0312e;}
 
+.loginBox .right .btns a.linkedin { background-color: #007bb5;}
+.loginBox .right .btns a.google { background-color: #dd4b39;}
+.loginBox .right .btns a.github { background-color: rgb(85,85,85);}

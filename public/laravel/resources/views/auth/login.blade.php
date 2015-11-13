@@ -41,8 +41,11 @@
                     <div class="or"><span>or</span></div>
                     <h4 class="font-opensansbd">Sign in using:</h4>
                     <div class="btns">
-                        <a href="#" class="fb"><span><i class="fa fa-facebook-f"></i></span> Facebook</a>
-                        <a href="#" class="twitter"><span><i class="fa fa-twitter"></i></span> Twitter</a>
+                        <a href="{!! url('auth/social/facebook') !!}" class="fb"><span><i class="fa fa-facebook-f"></i></span> Facebook</a>
+                        <a href="{!! url('auth/social/google') !!}" class="google"><span><i class="fa fa-google"></i></span> Google</a>
+                        <a href="{!! url('auth/social/linkedin') !!}" class="linkedin"><span><i class="fa fa-linkedin"></i></span> Linkedin</a>
+                        <a href="{!! url('auth/social/twitter') !!}" class="twitter"><span><i class="fa fa-twitter"></i></span> Twitter</a>
+                        <a href="{!! url('auth/social/github') !!}" class="github"><span><i class="fa fa-github"></i></span> Github</a>
                     </div>
                 </div>
             </div>

@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('auth/social/{provider}', 'Auth\AuthController@redirectToProvider');
+Route::get('auth/social/{provider}/callback', 'Auth\AuthController@handleProviderCallback');
+
 Route::any('auth/{action}', 'Auth\AuthController@index');
 
 Route::get('/efiling/{tax_payer_type}/{step}', 'EFilingController@step');
